@@ -4,9 +4,9 @@ import Triangular from "./triangular";
 import Prime from "./prime";
 
 class SeriesCalculator implements ISeriesCalculator {
-  private fibonacci: Fibonacci;
-  private triangular: Triangular;
-  private prime: Prime;
+  private readonly fibonacci: Fibonacci;
+  private readonly triangular: Triangular;
+  private readonly prime: Prime;
 
   constructor() {
     this.fibonacci = new Fibonacci();
