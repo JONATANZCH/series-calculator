@@ -15,10 +15,12 @@ const ResultComponent: React.FC<ResultComponentProps> = ({ result }) => {
 
   return (
     <div ref={resultRef} className="mt-8 p-4 bg-white text-black rounded-lg shadow-lg max-w-md w-full">
-      {result !== null ? (
-        <p className="text-lg font-bold">The result is: <span className='text-green-600'>{result}</span></p>
+      {result === -1 ? (
+        <p className="text-lg font-bold text-center">Sorry, but I can't handle numbers that big! 😵‍💫</p>
+      ) : result !== null ? (
+        <p className="text-lg font-bold">The result is: <span className='text-green-600'>{result}</span>🫣</p>
       ) : (
-        <p className="text-lg text-center italic">Please enter a number to calculate the series.</p>
+        <p className="text-lg text-center italic">Please enter a number to calculate the series.😊</p>
       )}
     </div>
   );

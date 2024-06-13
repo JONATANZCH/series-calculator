@@ -9,7 +9,10 @@ const FormComponent: React.FC<FormComponentProps> = ({ onCalculate, isCalculatin
     e.preventDefault();
     const numInput = parseInt(input);
     if (isNaN(numInput) || numInput < 0) {
-      setError("Please enter a valid positive number.");
+      setError("Please enter a valid positive number.😠");
+    } else if (input.length > 7) {
+      setError("Can't process numbers that big.😵‍💫");
+      onCalculate(-1);
     } else {
       setError(null);
       onCalculate(numInput);
