@@ -8,7 +8,7 @@ const prime = new Prime();
 const triangular = new Triangular();
 const fibonacci = new Fibonacci();
 
-const n = 47;
+const n = 10;
 
 console.log(`Testing with n = ${n}`);
 const primeTerm = prime.getNthPrime(n + 1);
